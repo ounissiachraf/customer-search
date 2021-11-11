@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Search for a customer</title>
+    <meta name="description" content="Exercice d'application de requêtes AJAX sur la base de données Classic Models">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link href="css/lib/normalize.css" rel="stylesheet">
+    <link href="css/lib/all.min.css" rel="stylesheet">
+    <link href="css/lib/layout-3wa.css" rel="stylesheet">
+    <link href="css/lib/theme-corporate.css" rel="stylesheet">
+    <link href="css/search-customer.css" rel="stylesheet">
+
+    <script src="js\ajax.js"></script>
+    <script src="js\events.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6611e056d0.js" crossorigin="anonymous"></script>
+    
+    
+    
+</head>
+<body>
+  <header class="banner">
+    <a class="banner-link" href="">
+      <strong class="banner-title">Search for a customer</strong>
+      <small>Module JS3</small>
+    </a>
+  </header>
+
+  <main class="project">
+    <div class="search">
+      <h1>Rechercher un client</h1>
+
+      <form action="search.php" method="get">
+        <label for="">Nom du Client</label>
+        <input id="search" type="text" name="nom">
+
+      </form>
+      <p>En saisissant les premières lettres, vous obtiendrez la liste des Clients correspondants :</p>
+
+      <ul id="listecustomer">
+
+      </ul>
+    </div>
+    <div class="detail">
+      <div class="somedetail">
+        <section class="head">
+        <h1></h1>
+        <button id="close"><i class="far fa-times-circle"></i></button>
+        </section>
+        <h4><i class="fas fa-user"></i>Contact</h4>
+        <p class="contact"></p>
+
+        <h4><i class="fas fa-phone-square-alt"></i>Phone</h4>
+        <p class="phone"></p>
+
+        <h4><i class="fas fa-map-marked-alt"></i>Adress</h4>
+        <p class="adress"></p>
+
+        <h4><i class="fas fa-globe-americas"></i>Country</h4>
+        <p class="country"></p>
+
+        <button id="openall" type="submit"><i class="fas fa-edit"></i></button>
+      </div>
+      <div class="alldetail">
+          <form action="update.php" method="get">
+            <fieldset >
+              <legend>Données client</legend>
+              <div class="mb-3">
+                <label class="form-label">Nom de la société</label>
+                <input id="input1" name="input1" type="text">
+                <br>
+                <label class="form-label">Adresse(1)</label>
+                <input type="text" id="adress1" name="adress1" class="form-control" >
+                <br>
+                <label class="form-label">Adresse(2)</label>
+                <input type="text" id="adress2" name="adress2" class="form-control" >
+                <br>
+                <label class="form-label">Code postal</label>
+                <input type="text" id="codepostal" name="codepostal" class="form-control" >
+                <label class="form-label">Ville</label>
+                <input type="text" id="city" name="city" class="form-control" >
+                <label class="form-label">Pays</label>
+                <input type="text" id="country" name="country" class="form-control" >
+      
+              </div>
+              
+              
+            </fieldset>
+
+            <fieldset>
+              <legend>Contact</legend>
+              <label class="form-label">Prénom du contact client</label>
+              <input type="text" id="firstnamecontact" name="firstnamecontact" class="form-control" >
+              <br>
+              <label class="form-label">Nom du contact client</label>
+              <input type="text" id="lastnamecontact" name="lastnamecontact" class="form-control" >
+              <br>
+              <label class="form-label">Téléphone du contact client</label>
+              <input type="text" id="phone" name="phone" class="form-control" >
+            </fieldset>
+            <button type="submit" id="valider" class="btn btn-primary">Valider</button>
+          </form>
+      </div>
+    </div>
+  </main>
+  <footer class="mentions">
+      <a href="https://3wa.fr/" title="Site de la 3WA"><img src="./css/lib/img/3wa.png" alt="3W Academy" width="50"></a>
+    <p><strong> &copy; 3W Academy - Formation Développeur WEB - Tous&nbsp;droits&nbsp;réservés</strong><br>
+    Cet exercice est mis à disposition des stagiaires dans le cadre exclusif de leur apprentissage</p>
+    <p><small>Nous remercions les auteurs des photos récoltées sur <a href="https://pixabay.com/" target="_blank">Pixabay</a></small></p>
+    <a class="goTop" href="#" aria-label="Remonter">↑</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/customers.js"></script>
+
+  <!-- Affichage du support 3wa -->
+  <script src=".3wa/js/resources.js" data-md="resources/objectives.md"></script>
+
+</body>
+</html>
